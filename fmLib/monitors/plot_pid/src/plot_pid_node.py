@@ -84,6 +84,7 @@ class ROSnode():
 		grid (True)
 		draw() # redraw plot
 
+		plt.pause(0.0000001)
 		# Get topic names
 		pid_topic = rospy.get_param("~pid_sub",'/fmInformation/pid')
 
@@ -130,6 +131,7 @@ class ROSnode():
 			if self.plot_feed_forward == True:
 				self.plt_f.set_ydata (self.f)
 			draw() # redraw plot
+			plt.pause(0.0000001)
 			self.r.sleep()
 
 # Main function.    
